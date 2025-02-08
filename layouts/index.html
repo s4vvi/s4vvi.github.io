@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html class="min-w-[1280px] min-h-[720px]">
+
+<head>
+{{- partialCached "head" . -}}
+</head>
+
+<body class="flex justify-center items-center">
+    <div class="absolute top-0 left-0 min-w-[1280px] min-h-[720px] w-full h-full pointer-events-none" style="box-shadow: 0 0 500px rgba(0, 0, 0, 1) inset;"></div>
+
+    <div class="flex min-w-[1280px] min-h-[720px]">
+        <div class="min-w-[640px] min-h-[720px] max-w-[640px] max-h-[720px]">
+            <div class="relative min-w-[500px] min-h-[500px] max-w-[500px] max-h-[500px] mx-auto">
+                <img class="absolute animate-wiggle min-w-[600px] min-h-[600px] max-w-[600px] max-h-[600px] pointer-events-none" style="user-select: none;" src="assets/img/wave-bg.png"/>
+                <img class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 min-w-[400px] min-h-[400px] max-w-[400px] max-h-[400px] pointer-events-none" style="user-select: none;" src="assets/img/avatar.png">
+                <img class="absolute animate-wiggle min-w-[600px] min-h-[600px] max-w-[600px] max-h-[600px] pointer-events-none" style="user-select: none;" src="assets/img/wave-fg.png"/>
+            </div>
+        </div>
+
+        <div class="min-w-[640px] min-h-[720px] max-w-[640px] max-h-[720px] content-center">
+            <div class="min-w-[500px] min-h-[500px] max-w-[500px] max-h-[500px] mx-auto">
+                <h4 id="welcome" class="text-2xl font-bold">Welcome to: `s4vvi.com` 💻</h4>
+
+                Hello, my name is 's4vvi' formerly known as 'm4dr1nch' or 'm4dd' for short...
+
+                Holder of:
+
+                <div class="text-center">
+                    <span class="bg-yellow-100 text-yellow-800 text-xs font-bold px-2.5 py-0.5 rounded">BSCP</span>
+                    <span class="bg-yellow-100 text-yellow-800 text-xs font-bold px-2.5 py-0.5 rounded">eJPT</span>
+                </div>
+                <div class="text-center">
+                    <span class="bg-yellow-100 text-yellow-800 text-xs font-bold px-2.5 py-0.5 rounded">CS Bachelor's</span>
+                </div>
+
+
+                Visit my <a href="blog">Blog (◕‿◕✿)</a>!!
+
+                <br>
+
+                Links:
+
+                <div class="grid">
+                    <div class="p-1 mx-auto"><script src="https://tryhackme.com/badge/359498"></script></div>
+
+                    <div class="p-1 mx-auto all:revert-layer">
+                        <a href="https://app.hackthebox.com/users/470048" target="_blank">
+                            <img src="https://www.hackthebox.com/badge/image/470048">
+                        </a>
+                    </div>
+                    <div class="p-1 mx-auto">
+                        <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js"
+                            data-name="bmc-button" data-slug="_m4dd" data-color="#343c41" data-emoji=""
+                            data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#ffffff"
+                            data-font-color="#cffafe" data-coffee-color="#FFDD00" >
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        message = [
+            'Welcome to: `s4vvi.com` 💻',
+            'W<span>3</span>lc<span>0</span>m<span>3</span> to: `s4vvi.com` 💻'
+        ]
+
+        var counter = 1;
+        var welcome = document.getElementById('welcome');
+        
+        setInterval(() => {
+            welcome.innerHTML = message[counter];
+            counter == 0 ? counter++ : counter--;
+        }, 2500);
+    </script>
+</body>
+
+</html>

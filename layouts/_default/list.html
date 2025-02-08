@@ -1,0 +1,87 @@
+{{- define "main" -}}
+<div class="flex h-screen">
+    <!--Outer container for collision w/ list-->
+    <nav class="w-[400px] min-w-[400px]">
+        <!--Inner container for fixed content-->
+        <div class="fixed w-[400px] min-w-[400px] py-[100px] bg-gray-900 h-full border-r border-slate-600 text-center overflow-auto">
+
+            <img class="mx-auto pointer-events-none" style="width: 200px; height: 200px;" src="/assets/img/avatar.png">
+
+            <br>
+
+            <p class="text-4xl text-capitalize font-bold">Welcome 👋</p>
+
+            <hr>
+
+            <p class="mx-10">This blog / repo mostly contains <span>InfoSec</span> content e.g. challenge, vulnerability & tool write-ups.</p>
+
+            <br>
+
+            <p>Specific tags:</p>
+
+            <div class="flex flex-wrap w-[200px] mx-auto my-2 justify-center">
+                <a href="/blog/" id="tag-all" title="All pages.">all</a>
+
+                {{- range $name, $taxonomy := .Site.Taxonomies.tags -}} {{- $cnt := .Count -}}
+                    {{- with $.Site.GetPage (printf "/tags/%s" $name) -}}
+                    <a href="{{ .RelPermalink }}" id="tag-{{ $name }}" title="All pages with tag: {{$name}}">{{$name}}</a>
+                    {{- end -}}
+                {{- end -}}
+            </div>
+
+            <hr>
+
+            <div class="mx-10 text-lg">
+                <a class="px-1" href="/">
+                    <i class="fa-solid fa-house"></i>
+                </a>
+                <a class="px-1" href="https://github.com/m4dr1nch" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="h-full max-w-[1000px] min-w-[1000px] mx-auto">
+        <div class="h-full content-center px-[50px]">
+
+            {{ range .Paginator.Pages }}
+
+            <a href="{{ .RelPermalink }}">
+                <div class="flex h-[100px] my-2 justify-between bg-slate-800 rounded-3xl transition duration-100 ease-in-out hover:bg-slate-700">
+                    <div class="flex flex-col p-4 text-slate-300 font-light">
+                        <span class="text-lg font-bold">{{ .LinkTitle }}</span>
+
+                        <b>{{ .Description }}</b>
+
+                        <span class="text-rose-200 text-sm font-bold">
+                            {{ .Date | time.Format ":date_medium" }}
+                        </span>
+                    </div>
+                    <div class="p-4">
+                        <div class="h-full flex flex-wrap-reverse flex-col items-center">
+                            {{- with .Param "tags" }}
+                                {{- range $index, $tag := (. | sort) }} 
+                                    {{- with $.Site.GetPage (printf "/%s/%s" "tags" $tag) }}
+                            <div id="tag-{{ $tag | urlize}}" class="">{{ $tag | urlize }}</div>
+                                    {{- end }}
+                                {{- end }}
+                            {{- end }}
+                        </div>
+                    </div>
+                </div>
+            </a>
+            {{ end }}
+
+
+            <paginator class="flex my-2">
+                {{- partial "pagination.html" . -}}
+            </paginator>
+
+        </div>
+    </div>
+</div>
+{{- end -}}
+
+{{- define "footer" -}}
+{{- end -}}

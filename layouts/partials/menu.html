@@ -1,0 +1,10 @@
+<div class="mx-auto" style="max-width: 800px;">
+    <div class="flex text-2xl">
+        <a href="/">[s4vvi.com]</a>
+        <div class="flex">
+            {{- range site.Menus.main }}
+            <a class="ml-2" href="{{ .URL }}">[{{ .Name }}]</a>
+            {{- end }}
+        </div>
+    </div>
+</div>

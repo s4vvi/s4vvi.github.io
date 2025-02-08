@@ -1,0 +1,12 @@
+baseURL = 'https://s4vvi.com/'
+languageCode = 'en-us'
+title = 's4vvi.com'
+
+[markup.tableOfContents]
+    endLevel = 6
+    startLevel = 1
+
+[pagination]
+    disableAliases = false
+    pagerSize = 5
+    path = 'page'

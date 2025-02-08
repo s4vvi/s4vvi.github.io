@@ -1,0 +1,68 @@
+{{- define "main" }}
+<div class="flex h-full">
+    <!--Outer container for collision w/ list-->
+    <nav class="w[400px] min-w-[400px]">
+        <!--Inner container for fixed content-->
+        <div class="fixed w-[400px] min-w-[400px] py-[100px] bg-gray-900 h-full border-r border-slate-600 text-center overflow-auto">
+
+            <img class="mx-auto pointer-events-none rounded-3xl" style="width: 100px; height: 100px;" src="{{ .Params.thumbnail }}">
+
+            <br>
+
+            <p class="text-4xl text-capitalize font-bold">{{ .Title }}</p>
+
+            <div class="flex flex-wrap w-[200px] mx-auto justify-center">
+                {{- partial "tags" . }}
+            </div>
+
+            <br>
+
+            <hr>
+
+            <p class="mx-10">{{ .Summary }}</p>
+
+            <div>
+                {{- $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+                {{- $dateHuman := .Date | time.Format ":date_long" }}
+                <time datetime="{{ $dateMachine }}" class="text-slate-400">{{ $dateHuman }}</time>
+            </div>
+
+            <hr>
+            
+
+            <div class="text-left mx-10 py-2">
+                {{ if .TableOfContents }}
+                <aside>
+                    <header class="text-2xl font-bold">
+                        Table of Contents
+                    </header>
+                    {{ .TableOfContents }}
+                </aside>
+                {{ end }}
+            </div>
+
+            <hr>
+
+            <div class="mx-10 text-lg">
+                <a class="px-1" href="/">
+                    <i class="fa-solid fa-house"></i>
+                </a>
+                <a class="px-1" href="/blog/">
+                    <i class="fa-solid fa-blog"></i>
+                </a>
+                <a class="px-1" href="https://github.com/m4dr1nch" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="h-full max-w-[800px] min-w-[800px] mx-auto">
+        <content class="h-full">
+            <div class="py-[100px] px-[50px]">
+            {{- .Content }}
+            </div>
+        </content>
+    </div>
+</div>
+{{- end }}

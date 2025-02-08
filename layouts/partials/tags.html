@@ -1,0 +1,9 @@
+{{ $taxonomy := "tags" }} {{ with .Param $taxonomy }}
+<div class="d-flex mt-2">
+    {{- range $index, $tag := . }}
+        {{- with $.Site.GetPage (printf "/%s/%s" $taxonomy $tag) }}
+    <a id="tag-{{ $tag | urlize }}" class="mr-2 pr-1 pl-1 rounded tag" href="{{ .Permalink }}">{{ $tag | urlize }}</a>
+        {{- end }}
+    {{- end }}
+</div>
+{{ end }}
