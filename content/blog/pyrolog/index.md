@@ -10,7 +10,7 @@ thumbnail = 'img/pl-logo.png'
 
 # Pyrolog
 ## Overview
-[PyroLog](https://github.com/m4dr1nch/PyroLog) is an effective but also a simple log cleaner. This is a tool that can be used to clear your tracks as a pen-tester or just clean a computer. PyroLog is currently only available on Linux and requires python3.
+[PyroLog](https://github.com/s4vvi/PyroLog) is an effective but also a simple log cleaner. This is a tool that can be used to clear your tracks as a pen-tester or just clean a computer. PyroLog is currently only available on Linux and requires python3.
 
 ![screenshot](https://i.imgur.com/6HwBSP6.jpg)
 

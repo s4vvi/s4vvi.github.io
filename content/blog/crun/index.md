@@ -13,14 +13,14 @@ Crun - Custom run (For Rofi)
 
 ![](img/cr-terminal.png)
 
-[Crun](https://github.com/m4dr1nch/crun) is a [Rofi](https://github.com/davatorium/rofi) plugin used to run custom applications. As opposed to desktop files, this allows quick configuration in `~/.config/rofi/crun.json` *(See provided sample configuration)*.
+[Crun](https://github.com/s4vvi/crun) is a [Rofi](https://github.com/davatorium/rofi) plugin used to run custom applications. As opposed to desktop files, this allows quick configuration in `~/.config/rofi/crun.json` *(See provided sample configuration)*.
 
 This plugin can be used to run various tools that would normally be run via terminal or the `run` Rofi module. The point is to avoid the `run` history or the repeated typing of long CLI commands.
 
 Installation:
 ```bash
 # Clone & compile the plugin
-git clone https://github.com/m4dr1nch/crun.git
+git clone https://github.com/s4vvi/crun.git
 cd crun && cargo build
 
 # Make directory for plugin library & configuration file

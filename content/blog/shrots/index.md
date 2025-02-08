@@ -13,7 +13,7 @@ thumbnail = 'img/sh-thumbnail.png'
 Shrots - A Fast Way To Memorize Shortcuts
 =========================================
 
-[Shrots](https://github.com/m4dr1nch/shrots) is a dead simple program written in Rust, that shows a prewritten configuration file in the form of a program, shortcuts, and details. This is a great way to memorize shortcuts for tools, as this program can be binded to a shortcut for quick access.
+[Shrots](https://github.com/s4vvi/shrots) is a dead simple program written in Rust, that shows a prewritten configuration file in the form of a program, shortcuts, and details. This is a great way to memorize shortcuts for tools, as this program can be binded to a shortcut for quick access.
 
 ![](img/sh-demo.png)
 

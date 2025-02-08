@@ -221,4 +221,4 @@ We can escape from the in-game console in multiple ways. I will be using a defau
 Credits
 =======
 
-And there you have it! This was "Cybercrafted" by m4dr1nch. Thank you for completing my CTF box really hope you enjoyed it!
+And there you have it! This was "Cybercrafted" by s4vvi (m4dr1nch). Thank you for completing my CTF box really hope you enjoyed it!
