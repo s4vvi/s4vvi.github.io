@@ -10,3 +10,6 @@ title = 's4vvi.com'
     disableAliases = false
     pagerSize = 5
     path = 'page'
+
+[taxonomies]
+    tag = 'tags'
