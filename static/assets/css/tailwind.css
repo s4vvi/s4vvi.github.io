@@ -51,10 +51,10 @@
     --text-lg--line-height: calc(1.75 / 1.125);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
+    --text-3xl: 1.875rem;
+    --text-3xl--line-height: calc(2.25 / 1.875);
     --text-4xl: 2.25rem;
     --text-4xl--line-height: calc(2.5 / 2.25);
-    --text-6xl: 3.75rem;
-    --text-6xl--line-height: 1;
     --font-weight-light: 300;
     --font-weight-bold: 700;
     --radius-lg: 0.5rem;
@@ -246,6 +246,9 @@
   }
   .left-1\/2 {
     left: calc(1/2 * 100%);
+  }
+  .isolate {
+    isolation: isolate;
   }
   .container {
     width: 100%;
@@ -716,16 +719,16 @@
     margin-top: calc(var(--spacing) * 10);
     margin-bottom: calc(var(--spacing) * 1);
     text-align: center;
-    font-size: var(--text-6xl);
-    line-height: var(--tw-leading, var(--text-6xl--line-height));
+    font-size: var(--text-4xl);
+    line-height: var(--tw-leading, var(--text-4xl--line-height));
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
   content h2 {
     margin-top: calc(var(--spacing) * 6);
     margin-bottom: calc(var(--spacing) * 1);
-    font-size: var(--text-4xl);
-    line-height: var(--tw-leading, var(--text-4xl--line-height));
+    font-size: var(--text-3xl);
+    line-height: var(--tw-leading, var(--text-3xl--line-height));
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
@@ -738,6 +741,12 @@
     font-weight: var(--font-weight-bold);
   }
   content p code {
+    border-radius: var(--radius-lg);
+    background-color: var(--color-slate-800);
+    padding-inline: calc(var(--spacing) * 1);
+    color: var(--color-cyan-200);
+  }
+  content li code {
     border-radius: var(--radius-lg);
     background-color: var(--color-slate-800);
     padding-inline: calc(var(--spacing) * 1);

@@ -111,11 +111,11 @@
     }
 
     content h1 {
-        @apply text-6xl text-center font-bold mt-10 mb-1;
+        @apply text-4xl text-center font-bold mt-10 mb-1;
     }
 
     content h2 {
-        @apply text-4xl font-bold mt-6 mb-1;
+        @apply text-3xl font-bold mt-6 mb-1;
     }
 
 
@@ -124,6 +124,10 @@
     }
 
     content p code {
+        @apply text-cyan-200 bg-slate-800 rounded-lg px-1; 
+    }
+
+    content li code {
         @apply text-cyan-200 bg-slate-800 rounded-lg px-1; 
     }
     
