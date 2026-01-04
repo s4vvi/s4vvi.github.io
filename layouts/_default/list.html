@@ -47,9 +47,9 @@
                     <div class="flex flex-col p-4 text-slate-300 font-light">
                         <span class="text-lg font-bold">{{ .LinkTitle }}</span>
 
-                        <b>{{ .Description }}</b>
+                        <b class="text-sm">{{ .Description }}</b>
 
-                        <span class="text-rose-200 text-sm font-bold">
+                        <span class="text-rose-200 text-xs font-bold">
                             {{ .Date | time.Format ":date_medium" }}
                         </span>
                     </div>
