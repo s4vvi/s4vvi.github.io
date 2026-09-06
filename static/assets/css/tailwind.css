@@ -66,6 +66,7 @@
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --animate-wiggle: wiggle 4s ease-in-out infinite;
   }
 }
 @layer base {
@@ -405,6 +406,9 @@
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
+  .animate-wiggle {
+    animation: var(--animate-wiggle);
+  }
   .flex-col {
     flex-direction: column;
   }
@@ -451,9 +455,6 @@
   .bg-slate-800 {
     background-color: var(--color-slate-800);
   }
-  .bg-yellow-100 {
-    background-color: var(--color-yellow-100);
-  }
   .p-1 {
     padding: calc(var(--spacing) * 1);
   }
@@ -463,14 +464,8 @@
   .px-1 {
     padding-inline: calc(var(--spacing) * 1);
   }
-  .px-2\.5 {
-    padding-inline: calc(var(--spacing) * 2.5);
-  }
   .px-\[50px\] {
     padding-inline: 50px;
-  }
-  .py-0\.5 {
-    padding-block: calc(var(--spacing) * 0.5);
   }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
@@ -538,9 +533,6 @@
   }
   .text-slate-600 {
     color: var(--color-slate-600);
-  }
-  .text-yellow-800 {
-    color: var(--color-yellow-800);
   }
   .lowercase {
     text-transform: lowercase;
@@ -1033,6 +1025,14 @@
 @property --tw-ease {
   syntax: "*";
   inherits: false;
+}
+@keyframes wiggle {
+  0%, 100% {
+    transform: rotate(-6deg);
+  }
+  50% {
+    transform: rotate(6deg);
+  }
 }
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
