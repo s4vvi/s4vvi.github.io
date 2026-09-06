@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 @theme {
-    --animate-wiggle: wiggle 4s ease-in-out infinite;
+    --animate-wiggle: wiggle 6s ease-in-out infinite;
 
 @keyframes wiggle {
     0%,
     100% {
-        transform: rotate(-6deg);
+        transform: rotate(-4deg);
     }
     50% {
-        transform: rotate(6deg);
+        transform: rotate(4deg);
     }
 }}
 
